@@ -1,0 +1,32 @@
+# 忽略编译生成文件
+*.o
+*.exe
+*.out
+*.a
+*.obj
+*.lib
+*.dll
+
+# 忽略可执行文件
+qqClient
+qqGroup
+
+# 忽略IDE和系统文件
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+
+# 忽略调试和构建目录
+debug/
+release/
+build/
+bin/
+obj/
+
+# 忽略日志文件
+*.log
