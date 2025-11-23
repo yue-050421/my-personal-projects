@@ -1,0 +1,58 @@
+# Project: 模拟即时通信系统
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = fun.o Group.o Account.o QQAccount.o QQClient.o WxGroup.o WbAccount.o WbClient.o WxClient.o QQGroup.o WxAccount.o
+LINKOBJ  = fun.o Group.o Account.o QQAccount.o QQClient.o WxGroup.o WbAccount.o WbClient.o WxClient.o QQGroup.o WxAccount.o
+LIBS     = -L"D:/dev c++/Dev-Cpp/MinGW64/lib" -L"D:/dev c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/dev c++/Dev-Cpp/MinGW64/include" -I"D:/dev c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/dev c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/dev c++/Dev-Cpp/MinGW64/include" -I"D:/dev c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/dev c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/dev c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 模拟即时通信系统.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+fun.o: fun.cpp
+	$(CPP) -c fun.cpp -o fun.o $(CXXFLAGS)
+
+Group.o: Group.cpp
+	$(CPP) -c Group.cpp -o Group.o $(CXXFLAGS)
+
+Account.o: Account.cpp
+	$(CPP) -c Account.cpp -o Account.o $(CXXFLAGS)
+
+QQAccount.o: QQAccount.cpp
+	$(CPP) -c QQAccount.cpp -o QQAccount.o $(CXXFLAGS)
+
+QQClient.o: QQClient.cpp
+	$(CPP) -c QQClient.cpp -o QQClient.o $(CXXFLAGS)
+
+WxGroup.o: WxGroup.cpp
+	$(CPP) -c WxGroup.cpp -o WxGroup.o $(CXXFLAGS)
+
+WbAccount.o: WbAccount.cpp
+	$(CPP) -c WbAccount.cpp -o WbAccount.o $(CXXFLAGS)
+
+WbClient.o: WbClient.cpp
+	$(CPP) -c WbClient.cpp -o WbClient.o $(CXXFLAGS)
+
+WxClient.o: WxClient.cpp
+	$(CPP) -c WxClient.cpp -o WxClient.o $(CXXFLAGS)
+
+QQGroup.o: QQGroup.cpp
+	$(CPP) -c QQGroup.cpp -o QQGroup.o $(CXXFLAGS)
+
+WxAccount.o: WxAccount.cpp
+	$(CPP) -c WxAccount.cpp -o WxAccount.o $(CXXFLAGS)
